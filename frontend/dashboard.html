@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Tracker Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container dashboard-container">
+
+        <div class="header">
+            <h2>Application Tracker Dashboard</h2>
+
+            <button onclick="logout()" class="logout-btn">
+                Logout
+            </button>
+        </div>
+
+        <div class="form-row">
+            <label for="company">Company</label>
+
+            <input
+                type="text"
+                id="company"
+                placeholder="Enter Company Name"
+                required
+            >
+        </div>
+
+        <div class="form-row">
+            <label for="role">Role</label>
+
+            <input
+                type="text"
+                id="role"
+                placeholder="Enter Role"
+                required
+            >
+        </div>
+
+        <div class="form-row">
+            <label for="eventType">Event Type</label>
+
+            <select id="eventType">
+                <option value="Application">Application</option>
+                <option value="Exam">Exam</option>
+                <option value="Interview">Interview</option>
+                <option value="HR Round">HR Round</option>
+                <option value="Group Discussion">Group Discussion</option>
+                <option value="Offer">Offer</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label for="eventDate">Event Date</label>
+
+            <input
+                type="date"
+                id="eventDate"
+                required
+            >
+        </div>
+
+        <button onclick="addApplication()">
+            Add Application
+        </button>
+
+        <h3>My Applications</h3>
+
+        <div id="list"></div>
+
+    </div>
+
+    <script type="module" src="./dashboard.js"></script>
+
+</body>
+</html>
